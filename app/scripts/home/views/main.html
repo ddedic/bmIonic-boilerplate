@@ -1,0 +1,21 @@
+<ion-view view-title="Main screen">
+
+    <ion-content lazy-scroll>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="vm.refresh()">
+        </ion-refresher>
+
+        <div class="loader" ng-if="!vm.myHTML">
+            <ion-spinner></ion-spinner>
+        </div>
+
+		<div class="list card animated slideInDown" ng-if="vm.myHTML">
+			<ion-item class="item item-text-wrap">
+				<div class="content" ng-bind-html="vm.myHTML"></div>
+			</ion-item>
+		</div>
+    </ion-content>
+    
+</ion-view>
+

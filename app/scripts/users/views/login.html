@@ -1,0 +1,45 @@
+<ion-view view-title="Login">
+
+    <ion-content>
+        <div class="sujet-image"></div>
+        <div class="list animated slideInUp">
+            <div class="item item-divider">
+                Already have an account?
+            </div>
+            <div class="item">
+                <form class="login-form" name="loginForm" ng-submit="vm.login()">
+                    <label class="item item-input">
+                      <input ng-model="vm.user.email" required name="email" type="email" placeholder="Email address">
+                    </label>
+                    <div ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="error">
+                        Wrong email address!
+                    </div>
+                    <label class="item item-input">
+                      <input ng-model="vm.user.password" required name="password" type="password" placeholder="Password">
+                    </label>
+                    <div class="error" ng-if="formerror">
+                        Validation failed
+                    </div>
+                    <button ng-disabled="loginForm.$invalid" class="button button-full button-positive" type="submit">
+                        Login
+                    </button>
+                </form>
+            </div>
+            <div class="item item-divider">
+                Do not have account?
+            </div>
+            <div class="item">
+                <a href="#/app/user/register" class="item item-icon-left">
+                    <i class="icon ion-person-add"></i>
+                    Create account
+                </a>
+                <a href="" ng-click="vm.loginSocial('facebook')" class="item item-icon-left">
+                    <i class="icon ion-social-facebook"></i>
+                    Facebook login
+                </a>
+            </div>
+        </div>
+    </ion-content>
+    
+</ion-view>
+

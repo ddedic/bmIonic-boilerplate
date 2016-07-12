@@ -1,0 +1,98 @@
+<ion-view view-title="Registrieren">
+
+    <ion-content>
+        <div class="sujet-image"></div>
+        <div class="list animated slideInUp">
+            <div class="item">
+                <form class="login-form" name="registerForm" ng-submit="vm.register()">
+                    <label class="item item-input">
+                        <input ng-model="vm.user.firstname" required name="firstname" type="text" placeholder="First name *">
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="vm.user.name" required name="name" type="text" placeholder="Last name *">
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="vm.user.password" required name="password" type="password" placeholder="Password *">
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="vm.user.password_confirmation" required name="password_confirmation" type="password" placeholder="Confirm password *">
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="vm.user.street" name="street" type="text" placeholder="Street">
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="vm.user.zip" name="zip" type="text" placeholder="Po.Box">
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="vm.user.city" name="city" type="text" placeholder="City">
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Country *
+                        </div>
+                        <select ng-model="vm.user.country" name="country" required>
+                            <option value="">Bitte wählen</option>
+                            <option value="ag">Ägypten</option>
+                            <option value="ar">Argentinien</option>
+                            <option value="au">Australien</option>
+                            <option value="be">Belgien</option>
+                            <option value="br">Brasilien</option>
+                            <option value="bg">Bulgarien</option>
+                            <option value="dk">Dänemark</option>
+                            <option value="de">Deutschland</option>
+                            <option value="ee">Estland</option>
+                            <option value="fi">Finnland</option>
+                            <option value="fr">Frankreich</option>
+                            <option value="gr">Griechenland</option>
+                            <option value="gb">Großbritannien</option>
+                            <option value="in">Indien</option>
+                            <option value="ie">Irland</option>
+                            <option value="is">Island</option>
+                            <option value="it">Italien</option>
+                            <option value="jp">Japan</option>
+                            <option value="hr">Kroatien</option>
+                            <option value="lv">Lettland</option>
+                            <option value="li">Liechtenstein</option>
+                            <option value="lt">Litauen</option>
+                            <option value="lu">Luxemburg</option>
+                            <option value="nz">Neuseeland</option>
+                            <option value="nl">Niederlande</option>
+                            <option value="no">Norwegen</option>
+                            <option value="at">Österreich</option>
+                            <option value="pl">Polen</option>
+                            <option value="pt">Portugal</option>
+                            <option value="ro">Rumänien</option>
+                            <option value="ru">Russland</option>
+                            <option value="sa">Saudi-Arabien</option>
+                            <option value="ch">Schweiz</option>
+                            <option value="se">Schweden</option>
+                            <option value="sk">Slowakei</option>
+                            <option value="es">Spanien</option>
+                            <option value="th">Thailand</option>
+                            <option value="cz">Tschechien</option>
+                            <option value="tr">Türkei</option>
+                            <option value="ua">Ukraine</option>
+                            <option value="hu">Ungarn</option>
+                            <option value="us">USA</option>
+                            <option value="ae">Vereinigte Arabische Emirate</option>
+                            <option value="cn">Volksrepublik China</option>
+                            <option value="by">Weißrussland</option>
+                        </select>
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="vm.user.phone" required name="phone" type="text" placeholder="Phone *">
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="vm.user.email" required type="email" placeholder="Email address *">
+                    </label>
+                    <ion-checkbox class="accept-legal-cb" ng-model="vm.user.accept" required>I accept terms and conditions.</ion-checkbox>
+                    <button ng-disabled="registerForm.$invalid" class="button button-full button-positive" type="submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+    
+</ion-view>
+
